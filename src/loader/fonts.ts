@@ -1,6 +1,6 @@
 import type { FontLoaderType } from "./types";
 
-import mainFontSrc from "./assets/glyphmesss.ttf";
+import mainFontSrc from "../assets/glyphmesss.ttf";
 
 const fontAssets: FontLoaderType[] = [{ name: "glyphmesss", src: mainFontSrc }];
 

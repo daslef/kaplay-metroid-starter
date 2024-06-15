@@ -1,8 +1,9 @@
-import kaboom, { KaboomCtx } from "kaplay";
+import kaboom, { KaboomCtx, SceneDef } from "kaplay";
 
 import soundAssets from "./sounds";
 import spriteAssets from "./sprites";
 import fontAssets from "./fonts";
+import mapAssets from "./maps";
 
 import createConfig from "../config";
 
@@ -30,10 +31,22 @@ function loadSounds(gameObject: KaboomCtx, assets: types.SoundLoaderType[]) {
   }
 }
 
+function loadMaps(
+  gameObject: KaboomCtx & Record<string, any>,
+  assets: types.MapLoaderType[]
+) {
+  gameObject.maps = new Map();
+
+  for (const { name, src } of assets) {
+    gameObject.maps.set(name, src as SceneDef);
+  }
+}
+
 const k = kaboom(createConfig());
 
 loadSprites(k, spriteAssets);
 loadSounds(k, soundAssets);
 loadFonts(k, fontAssets);
+loadMaps(k, mapAssets);
 
 export default k;

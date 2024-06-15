@@ -3,8 +3,10 @@ import droneSrc from "../assets/sprites/dr0ne.png";
 import burnerSrc from "../assets/sprites/burn3r.png";
 import tilesetSrc from "../assets/tileset.png";
 import backgroundSrc from "../assets/background.png";
-import roomOneSrc from "../maps/room1.png";
-import roomTwoSrc from "../maps/room2.png";
+import uiSrc from "../assets/ui.png";
+import animationsSrc from "../assets/animations.png";
+import sceneOneSrc from "../assets/maps/map1.png";
+import sceneTwoSrc from "../assets/maps/map2.png";
 
 import type { SpriteLoaderType, AtlasLoaderType } from "./types";
 
@@ -71,18 +73,18 @@ const spriteAssets: SpriteLoaderType[] = [
     },
   },
   {
-    name: "room1",
-    src: roomOneSrc,
+    name: "sceneOne",
+    src: sceneOneSrc,
   },
   {
-    name: "room2",
-    src: roomTwoSrc,
+    name: "sceneTwo",
+    src: sceneTwoSrc,
   },
 ];
 
 const atlasAssets: AtlasLoaderType[] = [
   {
-    src: "./assets/ui.png",
+    src: uiSrc,
     data: {
       healthBar: {
         x: 16,
@@ -94,7 +96,7 @@ const atlasAssets: AtlasLoaderType[] = [
     },
   },
   {
-    src: "./assets/animations.png",
+    src: animationsSrc,
     data: {
       cartridge: {
         x: 125,

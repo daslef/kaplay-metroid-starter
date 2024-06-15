@@ -1,7 +1,7 @@
 import notifySrc from "../assets/sounds/notify.mp3";
-import boomSrc from "../assets/sounds/notify.mp3";
-import healthSrc from "../assets/sounds/notify.mp3";
-import flamethrowSrc from "../assets/sounds/notify.mp3";
+import boomSrc from "../assets/sounds/boom.wav";
+import healthSrc from "../assets/sounds/health.wav";
+import flamethrowSrc from "../assets/sounds/flamethrower.mp3";
 
 import type { SoundLoaderType } from "./types";
 

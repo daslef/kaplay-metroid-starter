@@ -1,3 +1,7 @@
-import '../style.css'
+import "./style.css";
 
-import k from './loader'
+import k from "./loader";
+
+console.log(k);
+
+k.go("intro");

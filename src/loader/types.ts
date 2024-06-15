@@ -1,4 +1,4 @@
-import type { LoadSpriteOpt, SpriteAtlasData } from "kaplay";
+import type { LoadSpriteOpt, SpriteAtlasData, SceneDef } from "kaplay";
 
 export type SoundLoaderType = {
   name: string;
@@ -24,4 +24,9 @@ export type AtlasLoaderType = {
 export type GraphicsLoaderType = {
   sprites: SpriteLoaderType[];
   atlases: AtlasLoaderType[];
+};
+
+export type MapLoaderType = {
+  name: string;
+  src?: object;
 };
