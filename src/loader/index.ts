@@ -42,7 +42,7 @@ function loadMaps(
   }
 }
 
-const k = kaboom(createConfig());
+const k = kaboom(createConfig()) as KaboomCtx & { maps: Map<string, any> };
 
 loadSprites(k, spriteAssets);
 loadSounds(k, soundAssets);

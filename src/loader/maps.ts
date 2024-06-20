@@ -3,18 +3,14 @@ import mapTwoSrc from "../assets/maps/map2.json";
 
 import type { MapLoaderType } from "./types";
 
-const mapIntro: MapLoaderType = {
-  name: "intro",
-};
-
 const mapOne: MapLoaderType = {
-  name: "mapOne",
+  name: "one",
   src: mapOneSrc,
 };
 
 const mapTwo: MapLoaderType = {
-  name: "sceneTwo",
+  name: "two",
   src: mapTwoSrc,
 };
 
-export default [mapIntro, mapOne, mapTwo];
+export default [mapOne, mapTwo];

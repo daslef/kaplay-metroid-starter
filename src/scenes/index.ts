@@ -1,13 +1,11 @@
 import { KaboomCtx } from "kaplay";
 
-const scenes = {
-  sceneOne: (k: KaboomCtx) => {},
-  sceneTwo: (k: KaboomCtx) => {},
-  sceneIntro: (k: KaboomCtx) => {
-    k.setBackground(20, 20, 10);
-    k.add([k.text("hey there!", { font: "glyphmesss" }), k.pos(100, 100)]);
-    k.add([k.rect(10, 20), k.pos(k.width() / 2, k.height() / 2)]);
-  },
-};
+import sceneOne from "./sceneOne";
+import sceneTwo from "./sceneTwo";
 
-export default scenes;
+import { setMapColliders } from "./helpers";
+
+export default function loadScenes(k: KaboomCtx & { maps: Map<string, any> }) {
+  k.scene('one', () => setMapColliders(sceneOne(k)))
+  k.scene('two', () => setMapColliders(sceneTwo(k)))
+};

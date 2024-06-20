@@ -1,7 +1,7 @@
 import "./style.css";
 
 import k from "./loader";
+import loadScenes from "./scenes";
 
-console.log(k);
-
-k.go("intro");
+loadScenes(k);
+k.go("one");
